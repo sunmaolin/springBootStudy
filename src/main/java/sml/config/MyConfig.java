@@ -1,6 +1,8 @@
 package sml.config;
 
+import org.springframework.boot.autoconfigure.condition.ConditionalOnClass;
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Conditional;
 import org.springframework.context.annotation.Configuration;
 import sml.bean.User;
 
@@ -15,6 +17,8 @@ import sml.bean.User;
 @Configuration(proxyBeanMethods = false) //告诉SpringBoot这是一个配置类 == 配置文件
 public class MyConfig {
 
+//    @Conditional()  该注解下有许多子注解，满足条件后才进行装配
+//    @ConditionalOnClass() 比如：onClass  容器中有某个类才进行 User Bean的装配
     @Bean
     public User user01(){
         return new User("孙茂林");
