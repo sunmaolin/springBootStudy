@@ -1,7 +1,9 @@
 package sml.config;
 
 import org.springframework.boot.autoconfigure.condition.ConditionalOnClass;
+import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.context.annotation.*;
+import sml.bean.Car;
 import sml.bean.User;
 
 /**
@@ -15,6 +17,7 @@ import sml.bean.User;
 @Configuration(proxyBeanMethods = false) //告诉SpringBoot这是一个配置类 == 配置文件
 //@Import() 导入某些类到容器中
 //@ImportResource() 导入applicationContext.xml等配置文件
+@EnableConfigurationProperties(Car.class)
 public class MyConfig {
 
 //    @Conditional()  该注解下有许多子注解，满足条件后才进行装配

@@ -7,8 +7,9 @@ import org.springframework.stereotype.Component;
 /**
  * 只有在容器中的组件才会拥有SpringBoot强大的功能
  */
-@Component
+//@Component
 //该注解加载properties中的文件注入到属性中(只有自动注入autowired，或从容器中获取的才会注入)
+//如果不写@Component将该组件加入到容器中，可以使用：在配置类中加入@EnabledConfigurationProperties+@ConfigurationProperties
 @ConfigurationProperties(prefix = "mycar")
 public class Car {
     /**
