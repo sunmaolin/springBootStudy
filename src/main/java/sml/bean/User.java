@@ -1,27 +1,17 @@
 package sml.bean;
 
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+import lombok.ToString;
+
+@Data  //get set方法
+@AllArgsConstructor  // 全参构造器
+@NoArgsConstructor   // 无参构造器
+@ToString  // toString方法
 public class User {
+
     private String userName;
 
-    public User() {
-    }
 
-    public User(String userName) {
-        this.userName = userName;
-    }
-
-    public String getUserName() {
-        return userName;
-    }
-
-    public void setUserName(String userName) {
-        this.userName = userName;
-    }
-
-    @Override
-    public String toString() {
-        return "User{" +
-                "userName='" + userName + '\'' +
-                '}';
-    }
 }

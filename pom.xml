@@ -19,10 +19,16 @@
         <version>2.3.4.RELEASE</version>
     </parent>
 
+    <!--大部分所需jar包在Spring中已经指定好版本号，因此无需指定-->
     <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+        <!--lombok  简化javaBean-->
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
         </dependency>
     </dependencies>
 
